@@ -18,6 +18,9 @@ function Book(title, pages, isbn){
     this.title = title;
     this.pages = pages;
     this.isbn = isbn;
+    this.printIsbn = function(){
+        console.log(this.isbn);
+    }
 }
 //? Instanciando a classe criada:
 var book = new Book('Minutos de Sabedoria', '200', '102030');
@@ -28,7 +31,10 @@ console.log(book);
 Book.prototype.printTitle = function(){
     console.log('Título: ',this.title);
 }
-book.printTitle();
+
+book.printIsbn()
+book.printTitle()
 
 //! Estudar e entender sobre prototypes
 
+console.log(book);
