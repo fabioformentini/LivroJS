@@ -26,4 +26,40 @@ console.log(circleArea2(2));
 const hello = ()=> console.log('Hello');
 hello();
 
+const mensagem = () => {
+    console.log("Teste de callback");
+}
+const array1 = [1, 2, 3]
+
+let total1 = array1.forEach( el => {
+    el * 2;
+});
+
+let total2 = array1.map( el => {
+    el * 2;
+})
+
+function multiplicarElementos(arr){
+    let total = 0;
+    arr.forEach(el => {
+        total += el * 2;
+    });
+    return total;
+}
+
+function multiplicarElementos2(arr){
+    let total = [];
+    arr.map(el =>{
+        total.push(el*2);
+    });
+    return total;
+}
+
+arrayMultiplicado = multiplicarElementos(array1);
+arrayMultiplicado2 = multiplicarElementos2(array1);
+
+console.log(arrayMultiplicado);
+console.log(arrayMultiplicado2);
+
+setTimeout(mensagem, 3000);
 
